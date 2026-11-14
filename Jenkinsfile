@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -8,13 +9,13 @@ pipeline {
     stages {
         stage('Verificar Python') {
             steps {
-                bat 'python --version'
+                bat '"C:/Users/annec/AppData/Local/Programs/Python/Python313/python.exe" --version'
             }
         }
 
         stage('Instalar dependencias') {
             steps {
-                bat 'python -m venv .venv'
+                bat '"C:/Users/annec/AppData/Local/Programs/Python/Python313/python.exe" -m venv .venv'
                 bat '.venv\\Scripts\\python -m pip install -r requirements.txt'
             }
         }
