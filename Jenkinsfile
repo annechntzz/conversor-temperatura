@@ -1,7 +1,9 @@
 
 pipeline {
     agent any
-
+    triggers {
+        cron('H/5 * * * *')
+    }
     options {
         timestamps()
     }
